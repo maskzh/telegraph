@@ -1,2 +1,6 @@
 # telegraph
-a telegraph clone with react
+a telegraph clone via draft-js
+
+STILL WORK IN PROGRESS.
+
+![preview](./screenshot.png)

@@ -71,7 +71,7 @@ class Aside extends Component {
     if (fileInput.files != null && fileInput.files[0] != null) {
       const xhr = new XMLHttpRequest()
       xhr.open('post', '/upload/upload-image', true)
-      xhr.onreadystatechange = funtion() {
+      xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
           console.log(xhr)
           this._updateEditorState('image', xhr.url)
