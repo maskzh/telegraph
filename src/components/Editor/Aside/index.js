@@ -67,18 +67,18 @@ class Aside extends Component {
   }
 
   _onFileChange() {
+    const self = this
     const fileInput = ReactDOM.findDOMNode(this.refs.file)
     if (fileInput.files != null && fileInput.files[0] != null) {
       const xhr = new XMLHttpRequest()
       xhr.open('post', '/upload/upload-image', true)
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-          console.log(xhr)
-          this._updateEditorState('image', xhr.url)
-          setTimeout(() => this.props.onEditorFocus(), 0)
+          const result = JSON.parse(xhr.responseText)
+          self._updateEditorState('image', result.data.url)
+          setTimeout(() => self.props.onEditorFocus(), 0)
         }
       }
-
       const data = new FormData()
       data.append('upfile', fileInput.files[0])
       data.append('access-token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjgyNSwiZXhwIjoxODAyOTY3Njg2fQ.H3qmfLvgSy7fJYquGQH6Rq066-tnz-v6GxjmipHC0Qo')
@@ -136,8 +136,12 @@ class Aside extends Component {
     return (
       <div className={cls}>
         <div className="Editor-aside-operation">
-          <button onMouseDown={this.triggerFile}>Image</button>
-          <button onMouseDown={this.prompt}>Iframe</button>
+          <button onMouseDown={this.triggerFile}>
+            <i className="iconfont icon-camera" />
+          </button>
+          <button onMouseDown={this.prompt}>
+            <i className="iconfont icon-code" />
+          </button>
         </div>
         <div className="Editor-aside-urlInputContainer">
           <input

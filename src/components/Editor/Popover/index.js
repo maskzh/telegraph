@@ -5,20 +5,11 @@ import StyleButton from './StyleButton'
 import './style.css'
 
 const DEFAULT_BUTTONS = [
-  // { label: 'H1', style: 'header-one', type: 'block' },
-  { label: 'H2', style: 'header-two', type: 'block' },
-  { label: 'H3', style: 'header-three', type: 'block' },
-  // { label: 'H4', style: 'header-four', type: 'block' },
-  // { label: 'H5', style: 'header-five', type: 'block' },
-  // { label: 'H6', style: 'header-six', type: 'block' },
-  { label: 'Blockquote', style: 'blockquote', type: 'block' },
-  { label: 'UL', style: 'unordered-list-item', type: 'block' },
-  { label: 'OL', style: 'ordered-list-item', type: 'block' },
-  // { label: 'Code Block', style: 'code-block', type: 'block' },
-  { label: 'Bold', style: 'BOLD', type: 'inline' },
-  { label: 'Italic', style: 'ITALIC', type: 'inline' },
-  { label: 'Underline', style: 'UNDERLINE', type: 'inline' },
-  // { label: 'Monospace', style: 'CODE', type: 'inline' },
+  { label: 'Bold', style: 'BOLD', type: 'inline', icon: <i className="iconfont icon-bold" /> },
+  { label: 'Italic', style: 'ITALIC', type: 'inline', icon: <i className="iconfont icon-italic" /> },
+  { label: 'H2', style: 'header-two', type: 'block', icon: <i className="iconfont icon-t" /> },
+  { label: 'H3', style: 'header-three', type: 'block', icon: <i className="iconfont icon-st" /> },
+  { label: 'Blockquote', style: 'blockquote', type: 'block', icon: <i className="iconfont icon-quote" /> },
 ]
 
 class Popover extends Component {
@@ -69,6 +60,7 @@ class Popover extends Component {
               key={button.label}
               active={button.style === blockType}
               label={button.label}
+              icon={button.icon}
               onToggle={this.toggleBlockType}
               style={button.style}
             />
@@ -77,6 +69,7 @@ class Popover extends Component {
               key={button.label}
               active={currentStyle.has(button.style)}
               label={button.label}
+              icon={button.icon}
               onToggle={this.toggleInlineStyle}
               style={button.style}
             />

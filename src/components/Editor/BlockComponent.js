@@ -7,7 +7,7 @@ const Video = ({ src, width = '100%', height = 'auto' }) =>
   <video controls src={src} width={width} height={height} />
 
 const Iframe = ({ src, width = '100%', height = 'auto' }) =>
-  <iframe src={src} width={width} height={height} style={{ minHeight: '360' }} frameBorder="0" allowFullScreen />
+  <iframe src={src} width={width} height={height} style={{ minHeight: '360px' }} frameBorder="0" allowFullScreen />
 
 const BlockComponent = ({ contentState, block }) => {
   const entity = contentState.getEntity(block.getEntityAt(0))

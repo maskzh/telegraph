@@ -62,7 +62,9 @@ class RichEditor extends Component {
 
       if (!selectionRange.commonAncestorContainer.length) {
         const asideLeft = - aside.clientWidth
-        const asideTop = blockBounds.top - this.editorBounds.top
+        const asideTop = (blockBounds.top - this.editorBounds.top)
+          + ((blockBounds.bottom - blockBounds.top) / 2)
+          - (25 / 2)
 
         aside.style.left = `${asideLeft}px`
         aside.style.top = `${asideTop}px`

@@ -11,14 +11,14 @@ class StyleButton extends Component {
   }
 
   render() {
-    const { active, label, className } = this.props
+    const { active, label, icon, className } = this.props
     const cls = classnames({
       'active': active,
       [className]: className
     })
 
     return (
-      <button className={cls} onMouseDown={this.onToggle}>{label}</button>
+      <button className={cls} onMouseDown={this.onToggle}>{icon || label}</button>
     )
   }
 }
