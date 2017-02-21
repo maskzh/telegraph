@@ -1,0 +1,36 @@
+.Editor-popover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #292927;
+  border-radius: 6px;
+  padding: 9px 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity .2s ease .06s, transform .2s ease .06s;
+  transform: translate3d(0, 16px, 0);
+  opacity: 0;
+  line-height: 0;
+}
+.Editor-popover__appear {
+  transition: opacity .2s ease .06s, transform .2s ease .06s, top .2s ease, left .2s ease;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.Editor-popover button {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  padding: 3px 5px;
+  margin: 0;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+.Editor-popover button.active {
+  background-color: #fff;
+  color: #000;
+}

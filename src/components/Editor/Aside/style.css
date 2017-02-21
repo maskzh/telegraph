@@ -1,0 +1,57 @@
+.Editor-aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: -21px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease .06s, transform .2s ease .06s, top .2s ease;
+}
+.Editor-aside__appear {
+  pointer-events: auto;
+  opacity: 1;
+}
+.Editor-aside__showURLInput {
+  pointer-events: auto;
+  opacity: 1;
+  left: 0!important;
+}
+.Editor-aside-operation {
+  display: block;
+}
+.Editor-aside-operation button {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  padding: 3px 5px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.Editor-aside-urlInputContainer {
+  position: relative;
+  z-index: 2;
+  padding: 0 21px;
+  display: none;
+}
+.Editor-aside-urlInput {
+  display: block;
+  width: 500px;
+  border: 0;
+  color: #79828B;
+  font-size: 16px;
+  line-height: 1.58;
+  background-color: #eee;
+}
+.Editor-aside-fileInput {
+  position: absolute;
+  left: -9999px;
+}
+
+.Editor-aside.Editor-aside__showURLInput .Editor-aside-operation {
+  display: none;
+}
+.Editor-aside.Editor-aside__showURLInput .Editor-aside-urlInputContainer {
+  display: block;
+}

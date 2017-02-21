@@ -1,0 +1,70 @@
+.App {
+  position: relative;
+  padding: 21px 0;
+}
+
+.App-article {
+  padding: 21px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.58;
+  color: rgba(0,0,0,.8);
+}
+
+.App-aside {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  right: 0;
+  margin: 46px 0 0 376px;
+}
+
+.App-header h1, .App-header address {
+  position: relative;
+}
+
+.App-header h1 label, .App-header address label {
+  position: absolute;
+  color: rgba(0,0,0,.44);
+  border-right: 1px solid rgba(0,0,0,.15);
+  right: 100%;
+  padding: 0 21px;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.input__lg {
+  border: 0;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0 21px;
+}
+
+.input__sm {
+  border: 0;
+  font-size: 15px;
+  line-height: 18px;
+  color: #79828B;
+  padding: 0 21px;
+}
+
+.button {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin: 0 0 15px;
+  background-color: #fff;
+  cursor: pointer
+}
+
+.public-DraftEditorPlaceholder-root {
+  position: absolute;
+  color: #999;
+  z-index: -1;
+}

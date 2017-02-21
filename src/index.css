@@ -1,0 +1,17 @@
+html, body, figure {
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  text-align: center;
+}
+
+input {
+  outline: 0;
+}
+
+#root {
+  max-width: 732px;
+  margin: 0 auto;
+}
